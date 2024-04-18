@@ -1,5 +1,6 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import MyProductReducer from "./MyProductSlice";
+import MyPostsReducer from "./PostSlice"
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
   FLUSH,
@@ -17,7 +18,8 @@ const persistConfig = {
   
 };
 const rootReducer = combineReducers({
-    product:MyProductReducer
+    product:MyProductReducer,
+    postlist:MyPostsReducer
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

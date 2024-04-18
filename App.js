@@ -20,6 +20,7 @@ const App = () => {
       <PersistGate persistor={persistor}>
       <NavigationContainer>
         <Stack.Navigator>
+        <Stack.Screen name="HomePage" component={HomePage} options={{ headerShown: false }} />
           <Stack.Screen name="Redux Toolkit Demo" component={ProductPage} options={{ headerShown: false }} />
           <Stack.Screen name="CartPage" component={CartPage} options={{ headerShown: false }} />
         </Stack.Navigator>
